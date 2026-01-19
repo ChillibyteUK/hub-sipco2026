@@ -377,7 +377,7 @@ add_filter( 'gform_field_content', 'add_autocomplete_to_gform_fields', 10, 2 );
 function add_custom_menu_item( $items, $args ) {
     if ( 'primary_nav' === $args->theme_location ) {
 
-        $new_item = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page nav-item fs-subtle"><a href="' . get_home_url() . '/zh/">中文</a></li>';
+        $new_item = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page nav-item fs-subtle"><a href="' . get_home_url() . '/zh/" class="nav-link">中文</a></li>';
 
         $items .= $new_item;
     }

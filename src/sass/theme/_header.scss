@@ -133,7 +133,7 @@ header {
   // Mobile offcanvas styling
   .offcanvas {
     --bs-offcanvas-width: 75vw;
-    --bs-offcanvas-bg: var(--col-simco-navy);
+    --bs-offcanvas-bg: var(--col-sipco-red);
     
     .offcanvas-body {
       padding: 1rem 1.5rem;
@@ -145,7 +145,7 @@ header {
           padding: 1rem 0;
           font-size: var(--fs-base);
           font-weight: var(--fw-regular);
-          color: var(--col-simco-gold)
+          color: var(--col-white)
         }
 
         .current_page_item > .nav-link,
@@ -158,7 +158,7 @@ header {
         .current-menu-parent > .dropdown-item,
         .dropdown-menu.current-page-ancestor > .dropdown-item,
         .dropdown-menu.current-menu-item > .dropdown-item {
-          color: var(--col-simco-gold) !important;
+          color: var(--col-white) !important;
           font-weight: var(--fw-medium) !important;
         }
 
@@ -186,13 +186,13 @@ header {
             padding: 0.75rem 0;
             font-size: var(--fs-base);
             font-weight: var(--fw-light);
-            color: var(--col-simco-gold);
+            color: var(--col-white);
             background: transparent;
             
             &:hover,
             &:focus {
               background: rgba(0, 0, 0, 0.05);
-              color: var(--col-simco-gold);
+              color: var(--col-light-gold);
             }
           }
         }

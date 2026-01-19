@@ -11772,7 +11772,7 @@ header .logo {
 }
 header .offcanvas {
   --bs-offcanvas-width: 75vw;
-  --bs-offcanvas-bg: var(--col-simco-navy);
+  --bs-offcanvas-bg: var(--col-sipco-red);
 }
 header .offcanvas .offcanvas-body {
   padding: 1rem 1.5rem;
@@ -11784,7 +11784,7 @@ header .offcanvas .offcanvas-body .navbar-nav .nav-link {
   padding: 1rem 0;
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
-  color: var(--col-simco-gold);
+  color: var(--col-white);
 }
 header .offcanvas .offcanvas-body .navbar-nav .current_page_item > .nav-link,
 header .offcanvas .offcanvas-body .navbar-nav .current_page_parent > .nav-link,
@@ -11796,7 +11796,7 @@ header .offcanvas .offcanvas-body .navbar-nav .current-menu-ancestor > .dropdown
 header .offcanvas .offcanvas-body .navbar-nav .current-menu-parent > .dropdown-item,
 header .offcanvas .offcanvas-body .navbar-nav .dropdown-menu.current-page-ancestor > .dropdown-item,
 header .offcanvas .offcanvas-body .navbar-nav .dropdown-menu.current-menu-item > .dropdown-item {
-  color: var(--col-simco-gold) !important;
+  color: var(--col-white) !important;
   font-weight: var(--fw-medium) !important;
 }
 header .offcanvas .offcanvas-body .navbar-nav .dropdown-toggle::after {
@@ -11820,12 +11820,12 @@ header .offcanvas .offcanvas-body .navbar-nav .dropdown-menu .dropdown-item {
   padding: 0.75rem 0;
   font-size: var(--fs-base);
   font-weight: var(--fw-light);
-  color: var(--col-simco-gold);
+  color: var(--col-white);
   background: transparent;
 }
 header .offcanvas .offcanvas-body .navbar-nav .dropdown-menu .dropdown-item:hover, header .offcanvas .offcanvas-body .navbar-nav .dropdown-menu .dropdown-item:focus {
   background: rgba(0, 0, 0, 0.05);
-  color: var(--col-simco-gold);
+  color: var(--col-light-gold);
 }
 @media (min-width: 992px) {
   header .navbar-collapse {
