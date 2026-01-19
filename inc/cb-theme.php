@@ -198,7 +198,6 @@ function hub_theme_enqueue() {
     // wp_enqueue_script( 'glightbox', 'https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/js/glightbox.min.js', array(), $the_theme->get( 'Version' ), true );
     // wp_deregister_script( 'jquery' ); // needed by gravity forms
     // phpcs:enable
-
 }
 add_action( 'wp_enqueue_scripts', 'hub_theme_enqueue' );
 
@@ -232,11 +231,13 @@ function add_defer_to_scripts( $tag, $handle ) {
         return str_replace( ' src', ' defer src', $tag );
     }
 
+	// phpcs:disable
     // Defer jQuery when it's loaded (for Gravity Forms pages).
     // Note: This may break some plugins if they expect jQuery immediately.
     // if ( in_array( $handle, array( 'jquery-core', 'jquery-migrate' ), true ) ) {
     //     return str_replace( ' src', ' defer src', $tag );
     // }
+	// phpcs:enable
 
     return $tag;
 }
@@ -366,18 +367,20 @@ function add_autocomplete_to_gform_fields( $field_content, $field ) {
 }
 add_filter( 'gform_field_content', 'add_autocomplete_to_gform_fields', 10, 2 );
 
+/**
+ * Add custom menu item to primary navigation.
+ *
+ * @param string $items The HTML list content for the menu items.
+ * @param object $args  An object containing wp_nav_menu() arguments.
+ * @return string Modified menu items HTML.
+ */
+function add_custom_menu_item( $items, $args ) {
+    if ( 'primary_nav' === $args->theme_location ) {
 
-// phpcs:disable
-function add_custom_menu_item($items, $args)
-{
-    if ($args->theme_location == 'primary_nav') {
-
-        $new_item  = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="d-lg-none menu-item menu-item-type-post_type menu-item-object-page nav-item fs-subtle pt-2 pb-4"><i class="fa-solid fa-envelope text-accent-400"></i> ' . do_shortcode( '[contact_email]' ) . '</li>';
-        $new_item .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="d-lg-none menu-item menu-item-type-post_type menu-item-object-page nav-item fs-subtle"><i class="fa-solid fa-phone text-accent-400"></i> ' . do_shortcode( '[contact_phone]' ) . '</li>';
+        $new_item = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page nav-item fs-subtle"><a href="' . get_home_url() . '/zh/">中文</a></li>';
 
         $items .= $new_item;
     }
     return $items;
 }
-// add_filter('wp_nav_menu_items', 'add_custom_menu_item', 10, 2);
-// phpcs:enable
+add_filter( 'wp_nav_menu_items', 'add_custom_menu_item', 10, 2 );

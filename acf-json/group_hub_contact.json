@@ -22,8 +22,8 @@
         },
         {
             "key": "field_68ecca70acae3",
-            "label": "Contact Form ID",
-            "name": "contact_form_id",
+            "label": "Contact Form Shortcode",
+            "name": "shortcode",
             "aria-label": "",
             "type": "text",
             "instructions": "",

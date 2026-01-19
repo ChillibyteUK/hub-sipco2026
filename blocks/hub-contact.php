@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 			</div>
 			<div class="col-md-6">
-				<?= do_shortcode( '[gravityform id="' . get_field( 'contact_form_id' ) . '" title="false" ajax="true"]' ); ?>
+				<?= do_shortcode( get_field( 'shortcode' ) ); ?>
 			</div>
 		</div>
 	</div>
