@@ -1,0 +1,15 @@
+.full-width {
+    .container[class*="has-"][class*="-background-color"] {
+        padding-inline: 0 !important;
+    }
+    
+    &__icon {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+        @media (min-width:992px) {
+            margin-bottom: 0;
+        }
+    }
+
+}
