@@ -13,9 +13,9 @@
 /* Base button */
 .btn,
 .btn a {
-  --_bg: var(--col-mid-gold);
-  --_fg: var(--col-simco-navy);
-  --_bd: var(--col-mid-gold);
+  --_bg: var(--col-black);
+  --_fg: var(--col-white);
+  --_bd: var(--col-black);
 
   display: inline-flex;
   align-items: center;
@@ -203,5 +203,16 @@
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
+  }
+}
+
+/* Submit buttons - arrow styling */
+input[type="submit"] {
+  @extend .btn;
+  
+  &:hover {
+    background-color: var(--col-sipco-coral-50);
+    color: var(--col-black);
+    border-color: var(--col-black);      
   }
 }

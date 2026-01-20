@@ -218,10 +218,11 @@ input[type="file"] {
   }
 }
 
-input[type="submit"] {
-    @extend .btn;
-    @extend .btn-navy;
-}
+// // Default submit buttons (overridden by specific selectors like .gform_button)
+// input[type="submit"] {
+//     @extend .btn;
+//     @extend .btn-dark;
+// }
 
 // Custom checkbox styling
 input[type="checkbox"] {

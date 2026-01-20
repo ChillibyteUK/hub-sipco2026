@@ -30,7 +30,7 @@
   --col-sipco-dark-grey: #707074;
   --col-sipco-mid-grey: #f4f4f4;
   --col-sipco-light-grey: #f8f8f7;
-  --col-form-grey: #ffffff;
+  --col-form-grey: #F5F2EC;
   /* =========================
      TYPOGRAPHY (families/weights)
      ========================= */
@@ -11474,9 +11474,9 @@ p, ul, ol, blockquote, figure {
 .btn, input[type=submit],
 .btn a,
 input[type=submit] a {
-  --_bg: var(--col-mid-gold);
-  --_fg: var(--col-simco-navy);
-  --_bd: var(--col-mid-gold);
+  --_bg: var(--col-black);
+  --_fg: var(--col-white);
+  --_bd: var(--col-black);
   display: inline-flex;
   align-items: center;
   gap: var(--btn-gap);
@@ -11575,12 +11575,12 @@ input[type=submit] a:hover {
   background-color: var(--_fg);
 }
 
-.btn-navy, input[type=submit] {
+.btn-navy {
   background-color: var(--col-simco-navy);
   border-color: var(--col-simco-navy);
   color: var(--col-white);
 }
-.btn-navy::after, input[type=submit]::after {
+.btn-navy::after {
   background-color: var(--col-warm-grey);
   border-color: var(--col-warm-grey);
   color: var(--col-simco-navy);
@@ -11659,6 +11659,13 @@ input[type=submit] > i {
     transition: none;
   }
 }
+/* Submit buttons - arrow styling */
+input[type=submit]:hover {
+  background-color: var(--col-sipco-coral-50);
+  color: var(--col-black);
+  border-color: var(--col-black);
+}
+
 .skip-link {
   position: absolute;
   top: 0;
