@@ -36,7 +36,6 @@ $button_link = get_field( 'link' );
 $link_url    = $button_link ? $button_link['url'] : '';
 
 $link_image  = get_field( 'link_image' )[0] ?? null;
-$show_button = get_field( 'show_button' )[0] ?? null;
 
 $block_id = $block['id'] ?? null;
 
@@ -64,7 +63,7 @@ if ( $block_id ) {
 				?>
 				<?= wp_kses_post( get_field( 'content' ) ); ?>
 				<?php
-				if ( $show_button && $link_url ) {
+				if ( $link_url ) {
 					$target = $button_link['target'] ? $button_link['target'] : '_self';
 					?>
 					<a href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $target ); ?>" class="btn btn--sipco-coral btn-arrow mt-3"><?= esc_html( $button_link['title'] ); ?></a>
