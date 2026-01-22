@@ -21,9 +21,12 @@ $accordion_id = 'accordion-' . uniqid();
 		<div class="accordion" id="<?= esc_attr( $accordion_id ); ?>">
 			<?php
 			foreach ( $items as $i => $it ) {
-				$collapsed = ( 0 === $i ) ? '' : 'collapsed';
-				$show      = ( 0 === $i ) ? 'show' : '';
-				$expanded  = ( 0 === $i ) ? 'true' : 'false';
+				// $collapsed = ( 0 === $i ) ? '' : 'collapsed';
+				// $show      = ( 0 === $i ) ? 'show' : '';
+				// $expanded  = ( 0 === $i ) ? 'true' : 'false';
+				$collapsed = 'collapsed';
+				$show      = '';
+				$expanded  = 'false';
 				?>
 			<div class="accordion-item mb-3" data-aos="fade-up" data-aos-delay="<?= esc_attr( 100 * ( $i + 1 ) ); ?>">
 				<h2 class="accordion-header" id="heading-<?= esc_attr( $accordion_id . '-' . $i ); ?>">
