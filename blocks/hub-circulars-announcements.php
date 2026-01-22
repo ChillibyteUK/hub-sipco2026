@@ -12,8 +12,8 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container">
 		<?php
 		$tab_list = array(
-			'news_files'       => 'News Releases',
-			'regulatory_files' => 'Regulatory Notices',
+			'news_files'       => 'News releases',
+			'regulatory_files' => 'Regulatory notices',
 			'circulars_files'  => 'Circulars',
 		);
 		?>
@@ -140,10 +140,10 @@ defined( 'ABSPATH' ) || exit;
 							</div>
 							<?php
 						} else {
-							echo '<p>No items found.</p>';
+							echo '<p class="h3 has-sipco-coral-100-color">Coming soon.</p>';
 						}
 					} else {
-						echo '<p>No items found.</p>';
+						echo '<p class="h3 has-sipco-coral-100-color">Coming soon.</p>';
 					}
 					?>
 				</div>
