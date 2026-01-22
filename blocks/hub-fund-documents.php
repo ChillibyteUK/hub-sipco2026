@@ -20,11 +20,11 @@ defined( 'ABSPATH' ) || exit;
 			?>
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="heading-<?= esc_attr( $accordion_id ); ?>">
-					<button class="fs-h3-page-subtitle accordion-button<?= $is_first ? '' : ' collapsed'; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#<?= esc_attr( $accordion_id ); ?>" aria-expanded="<?= $is_first ? 'true' : 'false'; ?>" aria-controls="<?= esc_attr( $accordion_id ); ?>">
+					<button class="fs-h3-page-subtitle accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?= esc_attr( $accordion_id ); ?>" aria-expanded="false" aria-controls="<?= esc_attr( $accordion_id ); ?>">
 						<?= esc_html( get_sub_field( 'section_title' ) ); ?>
 					</button>
 				</h2>
-				<div id="<?= esc_attr( $accordion_id ); ?>" class="accordion-collapse collapse<?= $is_first ? ' show' : ''; ?>" aria-labelledby="heading-<?= esc_attr( $accordion_id ); ?>" data-bs-parent="#fundDocumentsAccordion">
+				<div id="<?= esc_attr( $accordion_id ); ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?= esc_attr( $accordion_id ); ?>" data-bs-parent="#fundDocumentsAccordion">
 					<div class="accordion-body">
 						<div class="fund-documents__documents">
 						<?php
