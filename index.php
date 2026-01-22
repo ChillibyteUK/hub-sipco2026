@@ -48,23 +48,49 @@ get_header();
 			wp_reset_postdata();
 		}
 	}
+
+
+
 	?>
     <section class="latest_posts mt-5">
 		<a id="latest-posts" class="anchor"></a>
         <div class="container pb-5">
             <?php
-            // Get all categories for filter buttons.
-            $all_categories = get_categories(
-				array(
-					'hide_empty' => true,
-					'orderby'    => 'name',
-					'order'      => 'ASC',
-				)
+			// Check if there are any posts first.
+			$args = array(
+				'post_type'      => 'post',
+				'post_status'    => array( 'publish' ),
+				'posts_per_page' => 1, // Just check if at least one post exists.
 			);
+			$check_query = new WP_Query( $args );
+			$has_posts = $check_query->have_posts();
+			wp_reset_postdata();
 
-            if ( ! empty( $all_categories ) ) {
-                ?>
-                <div class="row mb-5 index-filters">
+			if ( ! $has_posts ) {
+				// Display coming soon banner.
+				?>
+				<div class="row">
+					<div class="col-12">
+						<div class="coming-soon-banner text-center py-5">
+							<h2>Coming Soon</h2>
+							<p>New content will be available soon. Please check back later.</p>
+						</div>
+					</div>
+				</div>
+				<?php
+			} else {
+				// Get all categories for filter buttons.
+				$all_categories = get_categories(
+					array(
+						'hide_empty' => true,
+						'orderby'    => 'name',
+						'order'      => 'ASC',
+					)
+				);
+
+				if ( ! empty( $all_categories ) ) {
+					?>
+					<div class="row mb-5 index-filters">
                     <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
                         <label for="category-filter" class="visually-hidden">Filter by category</label>
                         <select class="form-select filter-select" id="category-filter" data-filter-type="category" aria-label="Filter by category">
@@ -102,26 +128,26 @@ get_header();
                         </select>
                     </div>
 					<div class="col-12 col-lg-6 mb-3 mb-lg-0">
-                        <form role="search" method="get" class="d-flex gap-2 align-items-center" action="<?= esc_url( home_url( '/' ) ); ?>">
-                            <label for="search-input" class="visually-hidden">Search posts</label>
-                            <input type="search" class="form-control" id="search-input" name="s" placeholder="Search posts..." autocomplete="off" value="<?= esc_attr( get_search_query() ); ?>" aria-label="Search posts">
-                            <button type="submit" class="btn btn--mid-blue search-button">Search</button>
-                        </form>
-                    </div>
-                </div>
-                <?php
-            }
-            ?>
-            <div class="row g-5">
-            <?php
-            // Custom query to include published posts.
-            $args = array(
-                'post_type'      => 'post',
-                'post_status'    => array( 'publish' ), // Include published posts.
-                'orderby'        => 'date',
-                'order'          => 'DESC', // Descending order.
-                'posts_per_page' => -1,    // Get all posts.
-            );
+						<form role="search" method="get" class="d-flex gap-2 align-items-center" action="<?= esc_url( home_url( '/' ) ); ?>">
+							<label for="search-input" class="visually-hidden">Search posts</label>
+							<input type="search" class="form-control" id="search-input" name="s" placeholder="Search posts..." autocomplete="off" value="<?= esc_attr( get_search_query() ); ?>" aria-label="Search posts">
+							<button type="submit" class="btn btn--mid-blue search-button">Search</button>
+						</form>
+					</div>
+				</div>
+				<?php
+				}
+				?>
+				<div class="row g-5">
+				<?php
+				// Custom query to include published posts.
+				$args = array(
+					'post_type'      => 'post',
+					'post_status'    => array( 'publish' ), // Include published posts.
+					'orderby'        => 'date',
+					'order'          => 'DESC', // Descending order.
+					'posts_per_page' => -1,    // Get all posts.
+				);
 
             $q = new WP_Query( $args );
 
@@ -214,15 +240,18 @@ get_header();
 						</a>
 					</div>
 					<?php
-                }
-            } else {
-                echo '<p>No posts found.</p>';
-            }
+				}
+			} else {
+				echo '<p>No posts found.</p>';
+			}
 
-            // Reset post data.
-            wp_reset_postdata();
-            ?>
-            </div>
+			// Reset post data.
+			wp_reset_postdata();
+			?>
+			</div>
+			<?php
+			} // End has_posts check.
+			?>
         </div>
     </section>
 	<?php
@@ -232,6 +261,10 @@ get_header();
 	}
 	?>
 </main>
+<?php
+// Only include the filtering script if there are posts.
+if ( $has_posts ) {
+	?>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const filterSelects = document.querySelectorAll('.filter-select');
@@ -263,6 +296,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+	<?php
+}
+?>
 
 <?php
 
