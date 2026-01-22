@@ -162,10 +162,10 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 				<?php
 			} else {
-				echo '<p>Coming Soon.</p>';
+				echo '<p class="h3 has-sipco-coral-100-color">First monthly factsheet coming early 2026</p>';
 			}
 		} else {
-			echo '<p>Coming Soon.</p>';
+			echo '<p class="h3 has-sipco-coral-100-color">First monthly factsheet coming early 2026</p>';
 		}
 		?>
 	</div>

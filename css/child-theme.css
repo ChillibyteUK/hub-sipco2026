@@ -13752,6 +13752,10 @@ main:has(.has-watermark) {
   color: #007a00 !important;
 }
 
+.has-text-align-center {
+  text-align: center !important;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

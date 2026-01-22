@@ -88,13 +88,17 @@ defined( 'ABSPATH' ) || exit;
 							<?= esc_html( $latest_year ); ?>
 						</button>
 					</li>
-					<?php if ( $has_archive ) : ?>
+					<?php
+					if ( $has_archive ) {
+						?>
 					<li class="nav-item" role="presentation">
 						<button class="nav-link" id="archive-tab" data-bs-toggle="tab" data-bs-target="#archive" type="button" role="tab" aria-controls="archive" aria-selected="false">
 							Archive
 						</button>
 					</li>
-					<?php endif; ?>
+						<?php
+					}
+					?>
 				</ul>
 
 				<!-- Tab panes -->
@@ -217,10 +221,10 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 				<?php
 			} else {
-				echo '<p>Coming Soon.</p>';
+				echo '<p class="h3 has-sipco-coral-100-color">Coming late 2026</p>';
 			}
 		} else {
-			echo '<p>Coming Soon.</p>';
+			echo '<p class="h3 has-sipco-coral-100-color">Coming late 2026</p>';
 		}
 		?>
 	</div>
