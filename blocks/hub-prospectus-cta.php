@@ -19,7 +19,7 @@ $key_facts_file  = get_field( 'key_facts_file' );
 				<?= wp_get_attachment_image( get_field( 'prospectus_cover' ), 'full', false, array( 'class' => 'prospectus-cta__cover' ) ); ?>
 			</div>
 			<div class="col-sm-8 col-lg-9">
-				<h2 class="h3">Prospectus Download</h2>
+				<h2 class="h3">Prospectus download</h2>
 				<p style="max-width:50ch" class="mb-4">Click below to access the SIPCo Prospectus for detailed information on our offering.</p>
 				<div>
 					<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/pdf-icon.svg' ); ?>" width="50" height="64" alt="PDF Icon" class="me-2 mb-1" />
