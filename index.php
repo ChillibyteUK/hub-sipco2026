@@ -71,9 +71,8 @@ get_header();
 				?>
 				<div class="row">
 					<div class="col-12">
-						<div class="coming-soon-banner text-center py-5">
-							<h2>Coming Soon</h2>
-							<p>New content will be available soon. Please check back later.</p>
+						<div class="coming-soon-banner py-5">
+							<h2 class="h3 has-sipco-coral-100-color">Coming soon</h2>
 						</div>
 					</div>
 				</div>

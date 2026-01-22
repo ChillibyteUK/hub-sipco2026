@@ -26,7 +26,7 @@ $key_facts_file  = get_field( 'key_facts_file' );
 					<a href="<?= esc_url( $prospectus_file['url'] ); ?>" target="_blank" class="btn btn-dark btn-arrow">Download now</a>
 				</div>
 				<hr class="my-5">
-				<h2 class="h3 mb-4">Key Facts Statement</h2>
+				<h2 class="h3 mb-4">Key facts statement</h2>
 				<div>
 					<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/pdf-icon.svg' ); ?>" width="50" height="64" alt="PDF Icon" class="me-2 mb-1" />
 					<a href="<?= esc_url( $key_facts_file['url'] ); ?>" target="_blank" class="btn btn-dark btn-arrow">Download now</a>

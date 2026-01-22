@@ -140,10 +140,10 @@ defined( 'ABSPATH' ) || exit;
 							</div>
 							<?php
 						} else {
-							echo '<p class="h3 has-sipco-coral-100-color">Coming soon.</p>';
+							echo '<p class="h3 has-sipco-coral-100-color">Coming soon</p>';
 						}
 					} else {
-						echo '<p class="h3 has-sipco-coral-100-color">Coming soon.</p>';
+						echo '<p class="h3 has-sipco-coral-100-color">Coming soon</p>';
 					}
 					?>
 				</div>
