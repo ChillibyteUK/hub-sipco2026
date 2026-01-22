@@ -29,7 +29,7 @@ if ( empty( $classes ) ) {
 							'full',
 							false,
 							array(
-								'class'  => 'full-width__icon',
+								'class'  => 'full-width__icon my-auto',
 								'alt'    => esc_attr( get_field( 'title' ) . ' Icon' ),
 							)
 						);
