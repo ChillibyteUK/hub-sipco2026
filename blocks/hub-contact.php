@@ -13,7 +13,12 @@ defined( 'ABSPATH' ) || exit;
 		<div class="row g-4">
 			<div class="col-md-6 pt-2">
 				<a href="<?= esc_url( get_field( 'map_embed_code', 'option' ) ); ?>" target="_blank" rel="noopener noreferrer">
-				<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/SIPCo-Map.jpg' ); ?>" alt="SIPCo map" class="img-fluid mb-4" />
+				<?php
+				$map_image_id = get_field( 'map_image', 'option' );
+				if ( $map_image_id ) {
+					echo wp_get_attachment_image( $map_image_id, 'full', false, array( 'class' => 'img-fluid mb-4', 'alt' => 'SIPCo map' ) );
+				}
+				?>
 				</a>
 				<div class="mt-4">
 					<div class="mb-2"><strong>SIPCo Infrastructure Private Credit OFC</strong></div>
