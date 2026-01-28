@@ -34,7 +34,6 @@ $wm = get_field( 'show_watermark' ) ? 'block-watermark' : '';
 
 $button_link = get_field( 'link' );
 $link_url    = $button_link ? $button_link['url'] : '';
-
 $link_image  = get_field( 'link_image' )[0] ?? null;
 
 $block_id = $block['id'] ?? null;

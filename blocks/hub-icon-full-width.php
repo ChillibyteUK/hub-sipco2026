@@ -21,7 +21,7 @@ if ( empty( $classes ) ) {
     <div class="container <?= esc_attr( $bg ); ?>">
 		<div class="px-5" data-aos="fade-up">
 			<div class="row align-items-center">
-				<div class="col-md-2 mb-4 mb-md-0 ps-0">
+				<div class="col-md-2 mb-4 mb-md-0 ps-0 text-center">
 					<?php
 					if ( get_field( 'icon' ) ) {
 						echo wp_get_attachment_image(
@@ -29,14 +29,14 @@ if ( empty( $classes ) ) {
 							'full',
 							false,
 							array(
-								'class'  => 'full-width__icon my-auto',
-								'alt'    => esc_attr( get_field( 'title' ) . ' Icon' ),
+								'class' => 'full-width__icon my-auto',
+								'alt'   => esc_attr( get_field( 'title' ) . ' Icon' ),
 							)
 						);
 					}
 					?>
 				</div>
-				<div class="col-md-10">
+				<div class="col-md-10 <?= ! get_field( 'title' ) ? 'no-title' : ''; ?>">
 					<?php
 					if ( get_field( 'title' ) ) {
 						?>

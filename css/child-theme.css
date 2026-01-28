@@ -12947,6 +12947,9 @@ a.image-16x9 img {
 .full-width p {
   margin-block-end: 0;
 }
+.full-width .no-title p:first-of-type {
+  margin-block-start: 0;
+}
 
 .hub-icon-accordion-2 .accordion-collapse {
   transition: none !important;
