@@ -54,11 +54,12 @@ $water     = ! empty( $watermark ) && 'Yes' === $watermark[0] ? 'block-watermark
 					<?= wp_kses_post( get_field( 'content' ) ); ?>
 				</div>
 				<?php
-				if ( get_field( 'cta' ) ) {
-					$cta    = get_field( 'cta' );
-					$target = $cta['target'] ? $cta['target'] : '_self';
+				$button_link = get_field( 'cta' );
+				$link_url    = $button_link ? $button_link['url'] : '';
+				if ( $link_url ) {
+					$target = $button_link['target'] ? $button_link['target'] : '_self';
 					?>
-					<p class="mt-4" data-aos="fade-right" data-aos-delay="200"><a class="btn btn-light" href="<?= esc_url( $cta['url'] ); ?>" target="<?= esc_attr( $target ); ?>"><?= esc_html( $cta['title'] ); ?></a></p>
+					<a href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $target ); ?>" class="btn btn--sipco-coral btn-arrow mt-3"><?= esc_html( $button_link['title'] ); ?></a>
 					<?php
 				}
 				?>
