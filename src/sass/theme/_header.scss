@@ -9,7 +9,7 @@
   color: var(--col-white);
   text-decoration: none;
   font-weight: var(--fw-medium);
-  
+
   // Override visually-hidden on focus
   &:focus {
     position: static !important;
@@ -26,7 +26,9 @@ header {
   background-color: var(--col-white);
   transition: var(--transition);
 
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
   font-family: var(--ff-body);
   font-size: var(--fs-base);
@@ -41,17 +43,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     &:focus {
       box-shadow: none;
       outline: none;
     }
-    
+
     &:focus-visible {
       outline: 2px solid var(--col-mid-gold);
       outline-offset: 2px;
     }
-    
+
     svg {
       // color: var(--col-simco-red);
       transition: opacity 0.3s ease;
@@ -59,12 +61,12 @@ header {
       width: 40px;
       height: 40px;
     }
-    
+
     // Hide hamburger icon when expanded
     &[aria-expanded="true"] svg {
       display: none;
     }
-    
+
     // Show X icon when expanded
     &[aria-expanded="true"]::after {
       // content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='%23BE2C4B'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
@@ -92,18 +94,18 @@ header {
     display: inline-block;
     text-decoration: none;
     padding: 0;
-    
+
     // Only show focus outline for keyboard navigation
     &:focus {
       outline: none;
     }
-    
+
     &:focus-visible {
       outline: 2px solid var(--col-dark-gold);
       outline-offset: 4px;
     }
   }
-  
+
   // Current page indicator - gold text color
   .current_page_item > .nav-link,
   .current_page_parent > .nav-link,
@@ -119,7 +121,7 @@ header {
     margin-right: 1rem;
   }
   .logo {
-    background-image: url(../img/sipco-logo.png);
+    background-image: url(../img/sipco-logo.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -134,18 +136,18 @@ header {
   .offcanvas {
     --bs-offcanvas-width: 75vw;
     --bs-offcanvas-bg: var(--col-sipco-red);
-    
+
     .offcanvas-body {
       padding: 1rem 1.5rem;
-      
+
       .navbar-nav {
         width: 100%;
-        
+
         .nav-link {
           padding: 1rem 0;
           font-size: var(--fs-base);
           font-weight: var(--fw-regular);
-          color: var(--col-white)
+          color: var(--col-white);
         }
 
         .current_page_item > .nav-link,
@@ -162,7 +164,6 @@ header {
           font-weight: var(--fw-medium) !important;
         }
 
-
         .dropdown-toggle::after {
           display: inline-block;
           margin-left: 0.5rem;
@@ -170,7 +171,7 @@ header {
           content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23AB965F' d='M6 8.825L1.175 4 2.236 2.939 6 6.704l3.764-3.765L10.825 4z'/%3E%3C/svg%3E");
           border: none;
         }
-        
+
         .dropdown-menu {
           position: static;
           float: none;
@@ -181,14 +182,14 @@ header {
           border: none;
           background: transparent;
           box-shadow: none;
-          
+
           .dropdown-item {
             padding: 0.75rem 0;
             font-size: var(--fs-base);
             font-weight: var(--fw-light);
             color: var(--col-white);
             background: transparent;
-            
+
             &:hover,
             &:focus {
               background: rgba(0, 0, 0, 0.05);
@@ -215,14 +216,14 @@ header {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='currentColor' d='M6 8.825L1.175 4 2.236 2.939 6 6.704l3.764-3.765L10.825 4z'/%3E%3C/svg%3E");
     border: none;
   }
-  
+
   .dropdown-toggle {
     // Remove focus styles on click
     &:focus {
       outline: none;
       box-shadow: none !important;
     }
-    
+
     // Only show outline for keyboard navigation
     &:focus-visible {
       outline: 2px solid var(--col-dark-gold);
@@ -252,10 +253,10 @@ header {
       left: 0;
       right: 0;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      
+
       // Ensure dropdowns start hidden
       display: none;
-      
+
       &.show {
         display: flex;
         flex-wrap: wrap;
@@ -263,7 +264,7 @@ header {
         gap: 2rem;
         padding-block: 0;
       }
-      
+
       // Constrain content like Bootstrap container
       @media (min-width: 1400px) {
         padding-left: calc((100vw - 1320px) / 2);
@@ -284,7 +285,7 @@ header {
       line-height: var(--lh-body);
       white-space: nowrap;
       flex: 0 0 auto;
-      
+
       &:hover,
       &:focus-visible {
         background-color: rgba(255, 255, 255, 0.15);
@@ -296,7 +297,7 @@ header {
     // Triangle indicator positioned above parent
     .dropdown-toggle {
       position: relative;
-      
+
       &[aria-expanded="true"]::before {
         content: "";
         position: absolute;

@@ -39,7 +39,7 @@ defined( 'ABSPATH' ) || exit;
             </div>
             <div class="col-sm-5">
 				<div>Advised by SIMCo:</div>
-				<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/SIMCo-logo-tx.png' ); ?>" alt="SIMCo Logo" width="279" height="58" class="my-2" />
+				<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/simco-logo.svg' ); ?>" alt="SIMCo Logo" width="279" height="58" class="my-2" />
 				<div class="mt-3">
 					&copy; <?= esc_html( gmdate( 'Y' ) ); ?> Sequoia Investment Management Company Limited
 				</div>
