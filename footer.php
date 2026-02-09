@@ -38,6 +38,8 @@ defined( 'ABSPATH' ) || exit;
 				</nav>
             </div>
             <div class="col-sm-5">
+				<div>Managed by SIMCAP:</div>
+				<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/simcap-logo.svg' ); ?>" alt="SIMCAP Logo" width="279" height="58" class="my-2" />
 				<div>Advised by SIMCo:</div>
 				<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/simco-logo.svg' ); ?>" alt="SIMCo Logo" width="279" height="58" class="my-2" />
 				<div class="mt-3">
