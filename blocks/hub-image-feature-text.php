@@ -36,7 +36,7 @@ if ( $fg_slug ) {
 	<div class="container py-5">
 		<div class="row align-items-center">
 			<div class="col-md-5">
-				<h2 class="mb-4"><?= esc_html( get_field( 'title' ) ); ?></h2>
+				<h2><?= esc_html( get_field( 'title' ) ); ?></h2>
 				<div class="has-h-4-font-size"><?= wp_kses_post( get_field( 'content' ) ); ?></div>
 			</div>
 		</div>
