@@ -7,8 +7,18 @@
 
 defined( 'ABSPATH' ) || exit;
 
+// Support Gutenberg color picker.
+$bg         = ! empty( $block['backgroundColor'] ) ? 'has-' . $block['backgroundColor'] . '-background-color' : '';
+$fg         = ! empty( $block['textColor'] ) ? 'has-' . $block['textColor'] . '-color' : '';
+
+$padding = '';
+
+if ( $bg !== '' || $bg !== 'has-white-background-color' ) {
+	$padding = 'py-5';
+}
+
 ?>
-<section class="icon-bar has-sipco-red-background-color has-white-color py-5">
+<section class="icon-bar <?= esc_attr( $padding . ' ' . $bg . ' ' . $fg ); ?>">
 	<div class="container">
 		<div class="row g-5 justify-content-center">
 			<div class="col-md-4 text-center fw-bold">
