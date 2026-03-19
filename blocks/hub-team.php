@@ -17,7 +17,7 @@ $cards = get_field( 'cards' ) ? get_field( 'cards' ) : 'three-cards';
 		<h2 class="mb-4 hub-team__heading"><?= esc_html( $team->name ); ?></h2>
 		<?php
 		if ( get_field( 'intro' ) ) {
-			echo '<div>' . wp_kses_post( get_field( 'intro' ) ) . '</div>';
+			echo '<div class="mb-4">' . wp_kses_post( get_field( 'intro' ) ) . '</div>';
 		}
 		?>
 	</div>
