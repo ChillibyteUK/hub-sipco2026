@@ -39,11 +39,11 @@ defined( 'ABSPATH' ) || exit;
             </div>
             <div class="col-sm-5">
 				<div>Managed by:</div>
-				<a href="#" target="_blank">
+				<a href="https://www.simcap.hk/" target="_blank">
 					<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/simcap-logo.svg' ); ?>" alt="SIMCAP Logo" width="279" height="58" class="my-2" />
 				</a>
 				<div>Advised by:</div>
-				<a href="#" target="_blank">
+				<a href="https://www.simcofunds.com/" target="_blank">
 					<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/simco-logo.svg' ); ?>" alt="SIMCo Logo" width="279" height="58" class="my-2" />
 				</a>
 				<div class="mt-3">
