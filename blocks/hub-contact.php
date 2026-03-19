@@ -21,7 +21,8 @@ defined( 'ABSPATH' ) || exit;
 				?>
 				<!-- </a> -->
 				<div class="mt-4">
-					<div class="mb-2"><strong>SIPCo Infrastructure Private Credit OFC</strong></div>
+					<div class="mb-2"><strong>SIMCo Infrastructure Private Credit OFC (SIPCo) (the Fund)</strong></div>
+					<div class="mb-2"><strong>SIMCo Credit Asia-Pacific Limited (SIMCAP) (the Investment Manager)</strong></div>
 					<?= do_shortcode( '[contact_address]' ); ?>
 					<div class="mt-2"><?= esc_html( get_field( 'contact_phone', 'option' ) ); ?></div>
 				</div>
