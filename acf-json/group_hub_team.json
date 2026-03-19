@@ -47,6 +47,27 @@
             "bidirectional_target": []
         },
         {
+            "key": "field_69bc2ee126f1f",
+            "label": "Intro",
+            "name": "intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_68b042bf397b2",
             "label": "Cards",
             "name": "cards",
@@ -91,5 +112,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1756382525
+    "display_title": "",
+    "modified": 1773940471
 }
