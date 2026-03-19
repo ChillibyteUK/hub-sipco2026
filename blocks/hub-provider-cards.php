@@ -13,8 +13,9 @@ defined( 'ABSPATH' ) || exit;
 			<?php
 			while ( have_rows( 'cards' ) ) {
 				the_row();
+				$width = get_sub_field( 'width' ) ? get_sub_field( 'width' ) : '4';
 				?>
-				<div class="col-12 col-lg-4">
+				<div class="col-12 col-lg-<?= esc_attr( $width ); ?>">
 					<div class="provider-cards__card text-center">
 						<?php
 						$image = get_sub_field( 'image' );
