@@ -13,7 +13,7 @@ $fg         = ! empty( $block['textColor'] ) ? 'has-' . $block['textColor'] . '-
 
 $padding = '';
 
-if ( $bg !== '' || $bg !== 'has-white-background-color' ) {
+if ( $bg !== '' && $bg !== 'has-white-background-color' ) {
 	$padding = 'py-5';
 }
 
