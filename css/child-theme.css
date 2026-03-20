@@ -11315,6 +11315,12 @@ strong {
   font-weight: var(--fw-bold);
 }
 
+small, .small {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  font-weight: var(--fw-small);
+}
+
 h1, .h1 {
   font-family: var(--ff-body);
   font-size: var(--fs-h1);
