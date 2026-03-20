@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 					<div class="three-col-grey-cards-alt__card">
 						<div class="three-col-grey-cards-alt__card-body">
 							<div class="fs-body mb-3"><?php the_sub_field( 'title' ); ?></div>
-							<div class="h3"><?php the_sub_field( 'content' ); ?></div>
+							<div class="h3"><?= wp_kses_post( get_sub_field( 'content' ) ); ?></div>
 						</div>
 					</div>
 				</div>
